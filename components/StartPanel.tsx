@@ -90,10 +90,8 @@ export default function StartPanel() {
         {
           method: 'GET',
           headers: { 'Content-Type': 'application/json' }
-        },
-        {
-          handOff: true // Enable QR code for signing on another device
         }
+        // SDK automatically uses handoff for desktop, direct signing for mobile
       )
 
       if (response.ok) {

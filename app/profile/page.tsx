@@ -129,10 +129,8 @@ export default function ProfilePage() {
             profileData: userData,
             action: 'registration_submission'
           })
-        },
-        {
-          handOff: true // Enable QR code for signing on another device
         }
+        // SDK automatically uses handoff for desktop, direct signing for mobile
       )
 
       if (response.ok) {
